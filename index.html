@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap"
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
@@ -32,6 +32,321 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        /* Enhanced Minimalist Hero Section */
+        .minimalist-hero {
+            background-color: #000;
+            color: #fff;
+            padding: 120px 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(0, 255, 255, 0.1);
+            color: #00FFFF;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            text-transform: uppercase;
+        }
+        
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+        
+        .hero-title-gradient {
+            background: linear-gradient(135deg, #FFFFFF 0%, #00FFFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            opacity: 0.9;
+            max-width: 700px;
+            line-height: 1.6;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+        
+        .hero-btn-primary {
+            background: linear-gradient(135deg, #00FFFF 0%, #00CCCC 100%);
+            border: none;
+            color: #000;
+            padding: 15px 35px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.4);
+            color: #000;
+        }
+        
+        .hero-btn-secondary {
+            background: transparent;
+            border: 2px solid #00FFFF;
+            color: #00FFFF;
+            padding: 15px 35px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .hero-btn-secondary:hover {
+            background: rgba(0, 255, 255, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+            color: #00FFFF;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00FFFF;
+            display: block;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+            margin-top: 0.5rem;
+        }
+        
+        /* Moving Text Elements */
+        .moving-text {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.03);
+            font-size: 10rem;
+            font-weight: 800;
+            z-index: 1;
+            white-space: nowrap;
+            user-select: none;
+            font-family: 'Inter', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .text-1 {
+            top: 15%;
+            animation: moveRight 30s linear infinite;
+        }
+        
+        .text-2 {
+            bottom: 20%;
+            animation: moveLeft 35s linear infinite;
+        }
+        
+        .text-3 {
+            top: 45%;
+            right: 0;
+            animation: moveLeft 40s linear infinite;
+        }
+        
+        .text-4 {
+            top: 75%;
+            animation: moveRight 45s linear infinite;
+        }
+        
+        @keyframes moveRight {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100vw); }
+        }
+        
+        @keyframes moveLeft {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100vw); }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 4rem;
+            }
+            
+            .moving-text {
+                font-size: 8rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .minimalist-hero {
+                padding: 100px 0;
+                min-height: 90vh;
+            }
+            
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .moving-text {
+                font-size: 6rem;
+            }
+            
+            .hero-stats {
+                gap: 2rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .minimalist-hero {
+                padding: 80px 0;
+                min-height: 85vh;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+                max-width: 90%;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .hero-btn-primary,
+            .hero-btn-secondary {
+                width: 250px;
+                padding: 12px 25px;
+            }
+            
+            .moving-text {
+                font-size: 4rem;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 1.8rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .minimalist-hero {
+                padding: 60px 0;
+                min-height: 80vh;
+            }
+            
+            .hero-badge {
+                font-size: 0.8rem;
+                padding: 6px 15px;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-btn-primary,
+            .hero-btn-secondary {
+                width: 220px;
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            
+            .moving-text {
+                font-size: 3rem;
+            }
+            
+            .hero-stats {
+                gap: 1rem;
+            }
+            
+            .stat-item {
+                flex: 0 0 calc(50% - 1rem);
+            }
+            
+            .stat-number {
+                font-size: 1.6rem;
+            }
+            
+            .stat-label {
+                font-size: 0.8rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -94,45 +409,43 @@
                 </div>
             </div>
         </nav>
-<div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img class="w-100" src="img/carousel-1.png" alt="Blog Baobab">
-            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <h1 class="display-2 mb-4 animated slideInDown">Blog Baobab</h1>
-                <a href="#ecosysteme" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Découvrir</a>
+        
+        <!-- Enhanced Minimalist Hero Section -->
+        <div class="minimalist-hero">
+            <!-- Moving Background Text Elements -->
+            <div class="moving-text text-1">LABORATOIRE D'IDÉES</div>
+            <div class="moving-text text-2">ÉMERGENCE AFRICAINE</div>
+            <div class="moving-text text-3">TRANSFORMATION ÉCONOMIQUE</div>
+            <div class="moving-text text-4">INNOVATION CONTINUE</div>
+            
+            <div class="container hero-content">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-8">
+                        <!-- <div class="hero-badge">Depuis 2014 - Laboratoire d'Idées</div> -->
+                        <h1 class="hero-title">
+                            <span class="hero-title-gradient">Blog Baobab</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Laboratoire d'Idées pour l'Émergence Africaine. Écosystème entrepreneurial dédié à la transformation économique de l'Afrique par l'innovation, la collaboration et l'excellence opérationnelle.
+                        </p>
+                        
+                        <div class="hero-actions">
+                            <a href="#ecosysteme" class="hero-btn-primary">Découvrir</a>
+                            <a href="notre-parcours.html" class="hero-btn-secondary">Notre Mission</a>
+                            <a href="opportunites.html" class="hero-btn-secondary">Nous Rejoindre</a>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="carousel-item">
-            <img class="w-100" src="img/carousel-2.png" alt="Vision C.R.O.I.S.S.">
-            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <h1 class="display-2 mb-4 animated slideInDown">VISION C.R.O.I.S.S.</h1>
-                <a href="vision-croiss.html" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explorer</a>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img class="w-100" src="img/carousel-3.png" alt="Écosystème">
-            <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                <h1 class="display-2 mb-4 animated slideInDown">Notre Écosystème</h1>
-                <a href="#portfolio" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Voir Plus</a>
-            </div>
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
     </div>
     <!-- Header End -->
 
-
+    <!-- Rest of your content remains the same -->
     <!-- Indicateurs Start -->
-    <div class="container-fluid bg-secondary py-5">
+    <div class="container-fluid bg-secondary py-5" id="ecosysteme">
         <div class="container py-5">
             <div class="row g-4 text-center">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -167,7 +480,6 @@
         </div>
     </div>
     <!-- Indicateurs End -->
-
 
     <!-- Notre Parcours Start -->
     <div class="container-fluid py-5" id="ecosysteme">
@@ -444,7 +756,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="media-item">
                         <div class="media-img">
-                            <img class="img-fluid" src="img/media-1.jpg" alt="L'Afrique des Solutions">
+                            <img class="img-fluid" src="img/media-1.png" alt="L'Afrique des Solutions">
                         </div>
                         <div class="media-text p-4">
                             <h5 class="text-uppercase">"L'Afrique des Solutions"</h5>
@@ -456,7 +768,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="media-item">
                         <div class="media-img">
-                            <img class="img-fluid" src="img/media-2.jpg" alt="Énergie Durable">
+                            <img class="img-fluid" src="img/media-2.png" alt="Énergie Durable">
                         </div>
                         <div class="media-text p-4">
                             <h5 class="text-uppercase">"Énergie Durable"</h5>
